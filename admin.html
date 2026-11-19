@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin · Aviário Soberano</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Painel Admin</h1>
+    <a href="index.html">Voltar à vitrine</a>
+  </header>
+
+  <!-- Tela de login -->
+  <section id="login" class="admin-box">
+    <h2>Entrar</h2>
+    <form id="form-login">
+      <input id="senha" type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+      <p id="erro-login" class="erro" hidden>Senha incorreta.</p>
+    </form>
+  </section>
+
+  <!-- Painel -->
+  <main id="painel" hidden>
+    <section class="admin-box">
+      <h2 id="titulo-form">Novo produto</h2>
+      <form id="form-produto">
+        <input type="hidden" id="produto-id">
+        <label>Nome <input id="nome" required></label>
+        <label>Preço (R$) <input id="preco" type="number" step="0.01" min="0" required></label>
+        <label>Categoria
+          <select id="categoria"></select>
+        </label>
+        <label>Foto (URL) <input id="foto" type="url" placeholder="https://..."></label>
+        <label>Descrição <textarea id="descricao" rows="2"></textarea></label>
+        <label class="checkbox"><input id="destaque" type="checkbox"> Destaque na vitrine (máx. 3)</label>
+        <div class="acoes">
+          <button type="submit">Salvar</button>
+          <button type="button" id="cancelar">Cancelar</button>
+        </div>
+        <p id="erro-form" class="erro" hidden></p>
+      </form>
+    </section>
+
+    <section class="admin-box">
+      <h2>Produtos</h2>
+      <table>
+        <thead>
+          <tr><th>Nome</th><th>Categoria</th><th>Preço</th><th>Destaque</th><th></th></tr>
+        </thead>
+        <tbody id="lista"></tbody>
+      </table>
+    </section>
+
+    <button id="sair" type="button">Sair</button>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

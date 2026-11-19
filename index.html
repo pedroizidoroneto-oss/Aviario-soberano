@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviário Soberano</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca"><img src="assets/imagens/logo.jpg" alt="Logo Aviário Soberano"><h1>Aviário Soberano</h1></div>
+    <input id="busca" type="search" placeholder="Buscar produto..." aria-label="Buscar produto">
+  </header>
+
+  <nav class="categorias" id="categorias"></nav>
+
+  <main>
+    <section>
+      <h2>Destaques</h2>
+      <div id="destaques" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>Catálogo</h2>
+      <div id="catalogo"></div>
+      <p id="vazio" class="vazio" hidden>Nenhum produto encontrado.</p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Aviário Soberano · Dúvidas? <a href="#" data-wa-geral target="_blank" rel="noopener">Chame no WhatsApp</a>.</p>
+    <a href="admin.html" class="link-admin">Admin</a>
+  </footer>
+
+  <a class="wa-fixo" href="#" data-wa-geral target="_blank" rel="noopener">WhatsApp</a>
+
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
